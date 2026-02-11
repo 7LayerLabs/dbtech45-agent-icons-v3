@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBTECH45 Brand Kit - Print Ready</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        @page {
+            size: letter;
+            margin: 0.5in;
+        }
+        
+        @media print {
+            .no-print { display: none !important; }
+            .page-break { page-break-after: always; }
+            body { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #fff;
+            color: #000;
+            line-height: 1.5;
+            font-size: 11pt;
+        }
+        
+        .container {
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 40px;
+        }
+        
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 40px;
+            background: #000;
+            color: #fff;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            font-size: 42pt;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 5px;
+        }
+        
+        .header h1 span {
+            color: #F59E0B;
+        }
+        
+        .header .subtitle {
+            font-size: 14pt;
+            color: #A3A3A3;
+            margin-bottom: 15px;
+        }
+        
+        .header .tagline {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10pt;
+            color: #F59E0B;
+        }
+        
+        /* Sections */
+        section {
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            font-size: 18pt;
+            font-weight: 700;
+            color: #000;
+            border-bottom: 3px solid #F59E0B;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+        
+        h3 {
+            font-size: 12pt;
+            font-weight: 600;
+            color: #333;
+            margin: 20px 0 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        /* Color Swatches */
+        .color-row {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .color-swatch {
+            flex: 1;
+            min-width: 150px;
+            border: 1px solid #ddd;
+        }
+        
+        .swatch-color {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11pt;
+            font-weight: 600;
+        }
+        
+        .swatch-info {
+            padding: 12px;
+            background: #f9f9f9;
+        }
+        
+        .swatch-name {
+            font-weight: 700;
+            font-size: 11pt;
+            margin-bottom: 3px;
+        }
+        
+        .swatch-values {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 9pt;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        /* Primary Swatch - Large */
+        .primary-swatch {
+            background: #000;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 25px;
+        }
+        
+        .primary-color-block {
+            width: 150px;
+            height: 150px;
+            background: #F59E0B;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14pt;
+            font-weight: 700;
+            color: #000;
+        }
+        
+        .primary-info {
+            color: #fff;
+        }
+        
+        .primary-info h4 {
+            font-size: 24pt;
+            color: #F59E0B;
+            margin-bottom: 10px;
+        }
+        
+        .primary-info p {
+            color: #A3A3A3;
+            margin-bottom: 5px;
+            font-size: 10pt;
+        }
+        
+        .primary-info .values {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10pt;
+            color: #fff;
+            line-height: 1.8;
+        }
+        
+        /* Typography */
+        .type-specimen {
+            background: #f5f5f5;
+            padding: 25px;
+            margin-bottom: 15px;
+        }
+        
+        .type-display {
+            font-size: 36pt;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 5px;
+        }
+        
+        .type-body {
+            font-size: 11pt;
+            color: #666;
+        }
+        
+        .type-code {
+            font-family: 'JetBrains Mono', monospace;
+            background: #000;
+            color: #F59E0B;
+            padding: 20px;
+            font-size: 10pt;
+        }
+        
+        .font-specs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .font-card {
+            border: 1px solid #ddd;
+            padding: 20px;
+        }
+        
+        .font-card h4 {
+            font-size: 14pt;
+            margin-bottom: 10px;
+        }
+        
+        .font-card .sample {
+            font-size: 24pt;
+            margin-bottom: 10px;
+        }
+        
+        .font-card .details {
+            font-size: 9pt;
+            color: #666;
+        }
+        
+        /* Logo Usage */
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .logo-example {
+            padding: 30px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        
+        .logo-example.dark {
+            background: #000;
+        }
+        
+        .logo-example.light {
+            background: #fff;
+        }
+        
+        .logo-example .mark {
+            font-size: 24pt;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+        
+        .logo-example .label {
+            font-size: 8pt;
+            color: #999;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        
+        .logo-example.dark .label {
+            color: #666;
+        }
+        
+        /* Do/Don't */
+        .rules-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .rule-card {
+            border: 2px solid;
+            padding: 15px;
+        }
+        
+        .rule-card.do {
+            border-color: #10B981;
+        }
+        
+        .rule-card.dont {
+            border-color: #EF4444;
+        }
+        
+        .rule-card h4 {
+            font-size: 10pt;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 10px;
+        }
+        
+        .rule-card.do h4 {
+            color: #10B981;
+        }
+        
+        .rule-card.dont h4 {
+            color: #EF4444;
+        }
+        
+        .rule-card ul {
+            font-size: 9pt;
+            padding-left: 15px;
+            color: #333;
+        }
+        
+        .rule-card li {
+            margin-bottom: 5px;
+        }
+        
+        /* Quick Reference */
+        .quick-ref {
+            background: #000;
+            color: #fff;
+            padding: 25px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 9pt;
+        }
+        
+        .quick-ref h4 {
+            color: #F59E0B;
+            font-family: 'Inter', sans-serif;
+            font-size: 10pt;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        
+        .quick-ref pre {
+            line-height: 1.8;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid #ddd;
+            margin-top: 40px;
+        }
+        
+        .footer p {
+            font-size: 9pt;
+            color: #999;
+        }
+        
+        .footer .brand {
+            font-size: 14pt;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 5px;
+        }
+        
+        .footer .brand span {
+            color: #F59E0B;
+        }
+        
+        /* Print Button */
+        .print-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #F59E0B;
+            color: #000;
+            border: none;
+            padding: 15px 30px;
+            font-size: 14pt;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            z-index: 1000;
+        }
+        
+        .print-btn:hover {
+            background: #D97706;
+        }
+        
+        /* Contact Info */
+        .contact-box {
+            background: #f5f5f5;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        
+        .contact-box h4 {
+            font-size: 10pt;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 10px;
+            color: #666;
+        }
+        
+        .contact-box p {
+            font-size: 11pt;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <button class="print-btn no-print" onclick="window.print()">📄 PRINT / SAVE PDF</button>
+    
+    <div class="container">
+        <!-- HEADER -->
+        <div class="header">
+            <h1>DB<span>TECH</span>45</h1>
+            <div class="subtitle">Brand Specification Kit</div>
+            <div class="tagline">// Trade by day. Build by night. Dad of 7 always.</div>
+        </div>
+        
+        <!-- PRIMARY COLOR -->
+        <section>
+            <h2>Primary Brand Color</h2>
+            <div class="primary-swatch">
+                <div class="primary-color-block">#F59E0B</div>
+                <div class="primary-info">
+                    <h4>Electric Amber</h4>
+                    <p>The signature DBTECH45 color. Use for all primary accents, CTAs, links, and brand marks.</p>
+                    <div class="values">
+                        HEX: #F59E0B<br>
+                        RGB: 245, 158, 11<br>
+                        CMYK: 0, 35, 96, 4<br>
+                        Pantone: 137 C (nearest match)
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- COLOR PALETTE -->
+        <section>
+            <h2>Color Palette</h2>
+            
+            <h3>Background Colors</h3>
+            <div class="color-row">
+                <div class="color-swatch">
+                    <div class="swatch-color" style="background: #000000; color: #fff;">#000000</div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Void Black</div>
+                        <div class="swatch-values">RGB: 0, 0, 0<br>Primary background</div>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="swatch-color" style="background: #111111; color: #fff;">#111111</div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Carbon</div>
+                        <div class="swatch-values">RGB: 17, 17, 17<br>Cards, surfaces</div>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="swatch-color" style="background: #1A1A1A; color: #fff;">#1A1A1A</div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Graphite</div>
+                        <div class="swatch-values">RGB: 26, 26, 26<br>Inputs, hovers</div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>Accent Colors</h3>
+            <div class="color-row">
+                <div class="color-swatch">
+                    <div class="swatch-color" style="background: #F59E0B; color: #000;">#F59E0B</div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Electric Amber</div>
+                        <div class="swatch-values">RGB: 245, 158, 11<br>Primary accent</div>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="swatch-color" style="background: #FBBF24; color: #000;">#FBBF24</div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Amber Glow</div>
+                        <div class="swatch-values">RGB: 251, 191, 36<br>Hover states</div>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="swatch-color" style="background: #D97706; color: #fff;">#D97706</div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Amber Dark</div>
+                        <div class="swatch-values">RGB: 217, 119, 6<br>Pressed states</div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>Text Colors</h3>
+            <div class="color-row">
+                <div class="color-swatch">
+                    <div class="swatch-color" style="background: #FFFFFF; color: #000; border: 1px solid #ddd;">#FFFFFF</div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Pure White</div>
+                        <div class="swatch-values">RGB: 255, 255, 255<br>Headlines, body</div>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="swatch-color" style="background: #A3A3A3; color: #000;">#A3A3A3</div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Silver</div>
+                        <div class="swatch-values">RGB: 163, 163, 163<br>Secondary text</div>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="swatch-color" style="background: #737373; color: #fff;">#737373</div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Smoke</div>
+                        <div class="swatch-values">RGB: 115, 115, 115<br>Disabled, hints</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="page-break"></div>
+        
+        <!-- TYPOGRAPHY -->
+        <section>
+            <h2>Typography</h2>
+            
+            <div class="font-specs">
+                <div class="font-card">
+                    <h4>Primary Font</h4>
+                    <div class="sample" style="font-weight: 700;">Inter</div>
+                    <div class="details">
+                        <strong>Weights:</strong> 400 Regular, 500 Medium, 600 Semibold, 700 Bold<br>
+                        <strong>Use for:</strong> Headlines, body text, UI elements<br>
+                        <strong>Source:</strong> Google Fonts (free)
+                    </div>
+                </div>
+                <div class="font-card">
+                    <h4>Code Font</h4>
+                    <div class="sample" style="font-family: 'JetBrains Mono', monospace;">JetBrains Mono</div>
+                    <div class="details">
+                        <strong>Weights:</strong> 400 Regular, 500 Medium<br>
+                        <strong>Use for:</strong> Code, data, terminal UI<br>
+                        <strong>Source:</strong> Google Fonts (free)
+                    </div>
+                </div>
+            </div>
+            
+            <h3>Type Specimens</h3>
+            <div class="type-specimen">
+                <div class="type-display">Imagination → Implementation</div>
+                <div class="type-body">Display: Inter Bold, 36-72pt, -0.02em letter-spacing</div>
+            </div>
+            
+            <div class="type-code">
+                $ ./boot --system dbtech45<br>
+                [OK] Loading identity...<br>
+                [OK] Status: shipping daily
+            </div>
+        </section>
+        
+        <!-- LOGO USAGE -->
+        <section>
+            <h2>Logo Usage</h2>
+            
+            <div class="logo-grid">
+                <div class="logo-example dark">
+                    <div class="mark" style="color: #F59E0B;">DBTECH45</div>
+                    <div class="label">Preferred - Amber on Black</div>
+                </div>
+                <div class="logo-example dark">
+                    <div class="mark" style="color: #FFFFFF;">DBTECH45</div>
+                    <div class="label">Alternate - White on Black</div>
+                </div>
+                <div class="logo-example light">
+                    <div class="mark" style="color: #000000;">DBTECH45</div>
+                    <div class="label">Light Mode - Black on White</div>
+                </div>
+            </div>
+            
+            <div class="rules-grid">
+                <div class="rule-card do">
+                    <h4>✓ Do</h4>
+                    <ul>
+                        <li>Use approved colors only</li>
+                        <li>Maintain clear space around logo</li>
+                        <li>Keep logo legible at all sizes</li>
+                        <li>Use on solid backgrounds</li>
+                    </ul>
+                </div>
+                <div class="rule-card dont">
+                    <h4>✗ Don't</h4>
+                    <ul>
+                        <li>Apply gradients or effects</li>
+                        <li>Stretch or distort</li>
+                        <li>Use unapproved colors</li>
+                        <li>Place on busy backgrounds</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- QUICK REFERENCE -->
+        <section>
+            <h2>Quick Reference for Vendors</h2>
+            
+            <div class="quick-ref">
+                <h4>Copy-Paste Color Values</h4>
+                <pre>
+PRIMARY ACCENT (Electric Amber)
+  HEX: #F59E0B
+  RGB: 245, 158, 11
+  CMYK: 0, 35, 96, 4
+  Pantone: 137 C
+
+BACKGROUND (Void Black)
+  HEX: #000000
+  RGB: 0, 0, 0
+  CMYK: 0, 0, 0, 100
+
+TEXT (Pure White)
+  HEX: #FFFFFF
+  RGB: 255, 255, 255
+  CMYK: 0, 0, 0, 0
+                </pre>
+            </div>
+            
+            <div class="contact-box">
+                <h4>Brand Owner</h4>
+                <p><strong>DBTECH45</strong></p>
+                <p>Website: dbtech45.com</p>
+                <p>Questions? Contact Derek directly.</p>
+            </div>
+        </section>
+        
+        <!-- FOOTER -->
+        <div class="footer">
+            <div class="brand">DB<span style="color: #F59E0B;">TECH</span>45</div>
+            <p>Brand Specification Kit v1.0 | February 2026</p>
+            <p>Prepared by Paula, Creative Director</p>
+        </div>
+    </div>
+</body>
+</html>
